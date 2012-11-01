@@ -191,11 +191,11 @@ class UnifiedIndex(object):
         self._facet_fieldnames = {}
 
     def build(self, indexes=None):
-        self.reset()
 
         if indexes is None:
             indexes = self.collect_indexes()
 
+        self.reset()
         for index in indexes:
             model = index.get_model()
 
